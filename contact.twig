@@ -1,0 +1,80 @@
+{% extends "layout.twig" %}
+
+{% block content %}
+
+<div class="bg-glow">
+
+    <!--header-->
+    <header>
+        <div class="header">
+            <div class="container">
+                <div class=row>
+                    <article class="span2">
+                        <h1 class="brand">
+                            {{widget('companyheader', 'companyheader', {"defaultlogo": asset('/images/logo.png')})|raw}}
+                        </h1>
+                    </article>
+                    <article class="span10">
+                        <div class="nav-collapse nav-collapse_ collapse">
+                            {{widget('navigation', 'navigation', {'align': 'left'})|raw}}
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <div class="global">
+
+        <!--content-->
+        <section class="">
+            <div class="container">
+                <div class="row">
+                    <section class="span12">
+
+                        {{widget('map', 'map', {'height': '470', 'zoom': '15', 'address': 'profile'})|raw}}
+
+                        <div class="row divider1">
+
+                            <article class="span3">
+                                {{widget('companyaddress', 'companyaddress', {})|raw}}
+                            </article>
+
+                            <article class="span1">
+
+                            </article>
+
+                            <article class="span8">
+                                {{zone('main')|raw}}
+                            </article>
+
+                        </div>
+
+                    </section>
+                </div>
+            </div>
+        </section>
+
+    </div>
+
+    <!--footer-->
+    <footer>
+        <div class="container">
+            <div class="row">
+                <section class="span12">
+                    <div class="row">
+                        <article class="span12">
+                            {{widget('companyname', 'name', {"business": "Chinahi"})|raw}}
+                            {{widget('content', 'copyright_copy', {content: '&copy; &nbsp; 2013 &nbsp; | &nbsp; ', lines: 'all'})|raw}}
+                            <a href="#">{{widget('content', 'copyright_link', {content: 'Privacy Policy', lines: 'all'})|raw}}</a>
+                            {{widget('space', 'space', {'height': '30'})|raw}}
+                        </article>
+                    </div>
+                </section>
+            </div>
+        </div>
+    </footer>
+    
+</div>
+
+{% endblock %}

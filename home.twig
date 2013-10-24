@@ -1,0 +1,210 @@
+{% extends "layout.twig" %}
+
+{% block content %}
+
+<div class="bg-glow">
+
+    <!--header-->
+    <header>
+        <div class="header">
+            <div class="container">
+                <div class=row>
+                    <article class="span2">
+                        <h1 class="brand">
+                            {{widget('companyheader', 'companyheader', {"defaultlogo": asset('/images/logo.png')})|raw}}
+                        </h1>
+                    </article>
+                    <article class="span10">
+                        <div class="nav-collapse nav-collapse_ collapse">
+                            {{widget('navigation', 'navigation', {'align': 'left'})|raw}}
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <section class="showcase">
+        {{widget('responsiveslideshow', 'responsiveslideshow', {'duration':'3', 'transSpeed': '1000', 'transType': 'fade', 'showButtons': false, 'showBullets': true, 'allowPause': false, 'allowLoop': false, 'images':[{'imageHeight':'375', 'imageWidth':'2000', 'url':'http://placehold.it/2000x375', 'title':'test title', 'description': 'test desc'},{'imageHeight':'375', 'imageWidth':'2000', 'url':'http://placehold.it/2000x375', 'title':'test title', 'description': 'test desc'},{'imageHeight':'375', 'imageWidth':'2000', 'url':'http://placehold.it/2000x375', 'title':'test title', 'description': 'test desc'},{'imageHeight':'375', 'imageWidth':'2000', 'url':'http://placehold.it/2000x375', 'title':'test title', 'description': 'test desc'}]})|raw}}
+    </section>
+
+    <div class="global">
+
+        <!--content-->
+
+        <div class="container">
+            <div class="row">
+                <article class="span12">
+                    <div class="row price">
+                        <article class="span2">
+                            {{widget('image', 'image1', { 'src': asset('images/car-img1.jpg'), 'fileSize': '58kb', 'imageSize': '768 x 768', 'imageWidth': '768px'})|raw}}
+                            {{widget('content', 'name1', {content: 'delicious mushroom soup', lines: 'all'})|raw}}
+                            {{widget('content', 'price1', {content: '$25.10', lines: 'all'})|raw}}
+                            {{widget('space', 'space', {'height': '30'})|raw}}
+                        </article>
+                        <article class="span2">
+                            {{widget('image', 'image2', { 'src': asset('images/car-img2.jpg'), 'fileSize': '58kb', 'imageSize': '768 x 768', 'imageWidth': '768px'})|raw}}
+                            {{widget('content', 'name2', {content: 'Seafood spaghetti', lines: 'all'})|raw}}
+                            {{widget('content', 'price2', {content: '$30.99', lines: 'all'})|raw}}
+                            {{widget('space', 'space', {'height': '30'})|raw}}
+                        </article>
+                        <article class="span2">
+                            {{widget('image', 'image3', { 'src': asset('images/car-img3.jpg'), 'fileSize': '58kb', 'imageSize': '768 x 768', 'imageWidth': '768px'})|raw}}
+                            {{widget('content', 'name3', {content: 'Best fish in town! ', lines: 'all'})|raw}}
+                            {{widget('content', 'price3', {content: '$29.80', lines: 'all'})|raw}}
+                            {{widget('space', 'space', {'height': '30'})|raw}}
+                        </article>
+                        <article class="span2">
+                            {{widget('image', 'image4', { 'src': asset('images/car-img4.jpg'), 'fileSize': '58kb', 'imageSize': '768 x 768', 'imageWidth': '768px'})|raw}}
+                            {{widget('content', 'name4', {content: 'Close up of Shrimps gourmet foods', lines: 'all'})|raw}}
+                            {{widget('content', 'price4', {content: '$13.65', lines: 'all'})|raw}}
+                            {{widget('space', 'space', {'height': '30'})|raw}}
+                        </article>
+                        <article class="span2">
+                            {{widget('image', 'image5', { 'src': asset('images/car-img5.jpg'), 'fileSize': '58kb', 'imageSize': '768 x 768', 'imageWidth': '768px'})|raw}}
+                            {{widget('content', 'name5', {content: 'Expensive exotic cocktails', lines: 'all'})|raw}}
+                            {{widget('content', 'price5', {content: '$14.20', lines: 'all'})|raw}}
+                            {{widget('space', 'space', {'height': '30'})|raw}}
+                        </article>
+                        <article class="span2">
+                            {{widget('image', 'image6', { 'src': asset('images/car-img6.jpg'), 'fileSize': '58kb', 'imageSize': '768 x 768', 'imageWidth': '768px'})|raw}}
+                            {{widget('content', 'name6', {content: 'Pancakes with  mushrooms ', lines: 'all'})|raw}}
+                            {{widget('content', 'price6', {content: '$10.99', lines: 'all'})|raw}}
+                            {{widget('space', 'space', {'height': '30'})|raw}}
+                        </article>
+                    </div>
+                </article>
+            </div>
+        </div>
+
+        <div id="mainbottom">
+            <div class="container">
+                <div class="row">
+                    <article class="span12">
+                        <div class="row">
+                            <article class="span2">
+                                {{widget('content', 'title1', {content: '<h2>Latest Tweets</h2>', lines: 'all'})|raw}}
+                                {{widget('twitter', 'twitter', {'searchKey': 'basekit', 'searchType': 'username', 'count': '2','refreshTime': '1800000','includeRts': '0'})|raw}}
+                            </article>
+                            <article class="span4">
+                                {{widget('content', 'title1', {content: '<h2>BEST CUISINE FOR THE MOST EXQUISITE TASTE!</h2>', lines: 'all'})|raw}}
+                                {{widget('content', 'content', {content: '<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamc laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>', lines: 'all'})|raw}}
+                                {{widget('button', 'button1', {italic: false, text:'Read More', 'align':'widget-align-left'})|raw}}
+                            </article>
+                            <article class="span6">
+                                <div class="row center posts">
+                                    <article class="span2">
+                                        {{widget('image', 'image7', { 'src': asset('images/page1-img1.jpg'), 'fileSize': '58kb', 'imageSize': '768 x 768', 'imageWidth': '768px'})|raw}}
+                                        {{widget('content', 'text1', {content: '<p>Lorem ipsum dolor sit amet consectetur adipisicing elit sed do eiusmod tempor.</p>', lines: 'all'})|raw}}
+                                        {{widget('button', 'button2', {italic: false, text:'Read More', 'align':'widget-align-left'})|raw}}
+                                        {{widget('space', 'space', {'height': '30'})|raw}}
+                                    </article>
+                                    <article class="span2">
+                                        {{widget('image', 'image8', { 'src': asset('images/page1-img2.jpg'), 'fileSize': '58kb', 'imageSize': '768 x 768', 'imageWidth': '768px'})|raw}}
+                                        {{widget('content', 'text2', {content: '<p>Lorem ipsum dolor sit amet consectetur adipisicing elit sed do eiusmod tempor.</p>', lines: 'all'})|raw}}
+                                        {{widget('button', 'button3', {italic: false, text:'Read More', 'align':'widget-align-left'})|raw}}
+                                        {{widget('space', 'space', {'height': '30'})|raw}}
+                                    </article>
+                                    <article class="span2">
+                                        {{widget('image', 'image9', { 'src': asset('images/page1-img3.jpg'), 'fileSize': '58kb', 'imageSize': '768 x 768', 'imageWidth': '768px'})|raw}}
+                                        {{widget('content', 'text3', {content: '<p>Lorem ipsum dolor sit amet consectetur adipisicing elit sed do eiusmod tempor.</p>', lines: 'all'})|raw}}
+                                        {{widget('button', 'button4', {italic: false, text:'Read More', 'align':'widget-align-left'})|raw}}
+                                        {{widget('space', 'space', {'height': '30'})|raw}}
+                                    </article>
+                                </div>
+                            </article>
+                        </div>
+                        {{zone('main')|raw}}
+                    </article>
+                </div>
+            </div>
+        </div>
+
+        <div id="bottom">
+            <div class="bottom">
+                <div class="container">
+                    <div class="row">
+                        <article class="span12">
+                            <div class="row center news">
+                                <article class="span3">
+                                    <div class="badge">
+                                        {{widget('content', 'month1', {content: 'July', lines: 'all'})|raw}}
+                                        {{widget('content', 'day1', {content: '25', lines: 'all'})|raw}}
+                                    </div>
+                                    <div class="caption">
+                                        {{widget('content', 'cap1', {content: 'traditional', lines: 'all'})|raw}}
+                                        {{widget('content', 'cap2', {content: 'italian cuisine', lines: 'all'})|raw}}
+                                        {{widget('content', 'time1', {content: 'at 9 pm -doors', lines: 'all'})|raw}}
+                                        {{widget('button', 'button5', {italic: false, text:'get the tickets', 'align':'widget-align-center'})|raw}}
+                                    </div>
+                                    {{widget('space', 'space', {'height': '30'})|raw}}
+                                </article>
+                                <article class="span3">
+                                    <div class="badge">
+                                        {{widget('content', 'month1', {content: 'July', lines: 'all'})|raw}}
+                                        {{widget('content', 'day1', {content: '20', lines: 'all'})|raw}}
+                                    </div>
+                                    <div class="caption">
+                                        {{widget('content', 'cap3', {content: 'best rest', lines: 'all'})|raw}}
+                                        {{widget('content', 'cap4', {content: 'for families', lines: 'all'})|raw}}
+                                        {{widget('content', 'time2', {content: 'at 9 pm -doors', lines: 'all'})|raw}}
+                                        {{widget('button', 'button6', {italic: false, text:'get the tickets', 'align':'widget-align-center'})|raw}}
+                                    </div>
+                                    {{widget('space', 'space', {'height': '30'})|raw}}
+                                </article>
+                                <article class="span3">
+                                    <div class="badge">
+                                        {{widget('content', 'month1', {content: 'July', lines: 'all'})|raw}}
+                                        {{widget('content', 'day1', {content: '15', lines: 'all'})|raw}}
+                                    </div>
+                                    <div class="caption">
+                                        {{widget('content', 'cap5', {content: 'kids eat free or', lines: 'all'})|raw}}
+                                        {{widget('content', 'cap6', {content: '2 courses for $9.99!', lines: 'all'})|raw}}
+                                        {{widget('content', 'time3', {content: 'at 9 pm -doors', lines: 'all'})|raw}}
+                                        {{widget('button', 'button7', {italic: false, text:'get the tickets', 'align':'widget-align-center'})|raw}}
+                                    </div>
+                                    {{widget('space', 'space', {'height': '30'})|raw}}
+                                </article>
+                                <article class="span3">
+                                    <div class="badge">
+                                        {{widget('content', 'month1', {content: 'July', lines: 'all'})|raw}}
+                                        {{widget('content', 'day1', {content: '5', lines: 'all'})|raw}}
+                                    </div>
+                                    <div class="caption">
+                                        {{widget('content', 'cap7', {content: '25% off for students', lines: 'all'})|raw}}
+                                        {{widget('content', 'cap8', {content: 'all year!', lines: 'all'})|raw}}
+                                        {{widget('content', 'time4', {content: 'at 9 pm -doors', lines: 'all'})|raw}}
+                                        {{widget('button', 'button8', {italic: false, text:'get the tickets', 'align':'widget-align-center'})|raw}}
+                                    </div>
+                                    {{widget('space', 'space', {'height': '30'})|raw}}
+                                </article>
+                            </div>
+                        </article>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <!--footer-->
+    <footer>
+        <div class="container">
+            <div class="row">
+                <section class="span12">
+                    <div class="row">
+                        <article class="span12">
+                            {{widget('companyname', 'name', {"business": "Chinahi"})|raw}}
+                            {{widget('content', 'copyright_copy', {content: ' &nbsp; &copy; &nbsp; 2013', lines: 'all'})|raw}}
+                            <a href="#">{{widget('content', 'copyright_link', {content: 'Privacy Policy', lines: 'all'})|raw}}</a>
+                            {{widget('space', 'space', {'height': '30'})|raw}}
+                        </article>
+                    </div>
+                </section>
+            </div>
+        </div>
+    </footer>
+    
+</div>
+
+{% endblock %}
