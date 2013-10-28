@@ -572,10 +572,16 @@ h1{
         color: @color-swatch1;
       }
       .logo{
-        display: inline-block;
-        margin: -36px 0 0px;
+        display: block;
+        margin: -36px 0 -51px;
+        position: relative;
+        z-index: 2;
         a{
           display: inline-block;
+          img{
+            .border-radius(1000px);
+            box-shadow: 0 0 5px rgba(0, 0, 0, .07);
+          }
         }   
       }
       .company-name{
