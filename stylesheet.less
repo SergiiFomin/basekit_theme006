@@ -1,5 +1,3 @@
-
-
 @color-swatch1:            #ffffff;
 @color-swatch2:            #8f8180;
 @color-swatch3:            #d64503;
@@ -229,7 +227,6 @@
 /*Forms*/
 
 .container{
-
   textarea{
     resize: none;
   }
@@ -271,10 +268,6 @@ body{
   color: @color-swatch2;
 }
 
-.bg-glow{
-
-}
-
 /*------ header ------- */
 
 header{
@@ -292,6 +285,7 @@ header{
 }
 
 /*menu*/
+
 .select-menu{
   width: 100%;
   margin: 12px auto;
@@ -420,45 +414,6 @@ header{
   background-repeat: repeat-x;
 }
 
-/*bootstrap classes*/
-
-.img-polaroid{  
-  padding: 0px;
-  box-shadow: none;
-  border: none;
-  .box-sizing(border-box);
-  .box-shadow(0 0 0);
-  >img{
-    max-width: inherit;
-    width: 100%;
-  }
-}
-
-.dl-horizontal{
-  dt{
-    float: left;
-    margin-right: 5px;
-    width: 25px;
-    text-align: left;
-    time{
-      text-transform: uppercase;
-      span{
-        display: block;
-      }
-    }
-  }
-  dd{
-    position: relative;
-    display: block;
-    overflow: hidden;
-    margin-left: 0;
-    padding: 0px 0px 0px 0px;
-    &.last {
-      padding-bottom: 0;
-    }
-  }
-}
-
 .btn {
   display: inline-block;
   font: 12px/16px 'Open Sans', serif;
@@ -533,22 +488,6 @@ header, footer, #content{
   }
 }
 
-/* background image */
-
-.bgPic{
-  position: absolute;
-  z-index: -1;
-  top: 0;
-  left: 0;
-  width: 100%;
-  overflow: hidden;
-  img{
-    width: 100%;
-    min-width: 1754px;
-    min-height: 553px;
-  }
-}
-
 /* end background image */
 
 .container{
@@ -558,7 +497,6 @@ header, footer, #content{
     border: none;
     .border-radius(0);
     .box-shadow(0 0 0);
-
     line-height: 20px;
     color: @textColor;
     padding: 5px 10px;
@@ -668,7 +606,7 @@ h3{
   letter-spacing: 1px;
 }
 
-#color{
+div[id$="color"]{
   h3{
     color: @color-swatch3;
   }
@@ -779,7 +717,7 @@ hr{
 /*--- content end ------*/
 
 .widget{
-  &#left{
+  &div[id$="left"]{
     float: left;
     margin-right: 28px;
   }
@@ -829,7 +767,7 @@ hr{
 }
 
 .posts{
-  #text1,#text2,#text3{
+  div[id$="text1"],div[id$="text2"],div[id$="text3"]{
     font-size: 11px;
     line-height: 18px;
     text-transform: uppercase;
@@ -872,26 +810,26 @@ hr{
       width: 100%;
       z-index: 0;
     }
-    #month1, #month2, #month3, #month4 {
+    div[id$="month1"], div[id$="month2"], div[id$="month3"], div[id$="month4"] {
       color: #FFFFFF;
       font: 22px/27px 'Lobster';
       margin: 0;
       position: relative;
       z-index: 1;
     }
-    #day1, #day2, #day3, #day4 {
+    div[id$="day1"], div[id$="day2"], div[id$="day3"], div[id$="day4"] {
       font: 30px/30px 'Lobster';
       position: relative;
       z-index: 1;
     }
   }
-  #cap1, #cap2, #cap3, #cap4, #cap5, #cap6, #cap7, #cap8 {
+  div[id$="cap1"], div[id$="cap2"], div[id$="cap3"], div[id$="cap4"], div[id$="cap5"], div[id$="cap6"], div[id$="cap7"], div[id$="cap8"] {
     font: 14px/18px 'Open Sans';
     text-transform: uppercase;
     color: @color-swatch3;
     letter-spacing: 2px;
   }
-  #time1, #time2, #time3, #time4, #time5, #time6, #time7, #time8 {
+ div[id$="time1"], div[id$="time2"], div[id$="time3"], div[id$="time4"], div[id$="time5"], div[id$="time6"], div[id$="time7"], div[id$="time8"] {
     font: 800 11px/18px 'Open Sans';
     text-transform: uppercase;
     color: @color-swatch3;
@@ -907,7 +845,7 @@ hr{
   }
 }
 
-&.new{
+.new{
   .badge {
     float: left;
     margin-right: 20px;
@@ -959,7 +897,7 @@ div[id$="copyright_copy"]{
   }
 }
 
-#copyright_link{
+div[id$="copyright_link"]{
   display: inline;
   a{
     text-decoration: none;
@@ -978,12 +916,12 @@ div[id$="copyright_copy"]{
   .widget.image{
     margin-bottom: 4px;
   }
-  #name1,#name2,#name3,#name4,#name5,#name6{
+  div[id$="name1"],div[id$="name2"],div[id$="name3"],div[id$="name4"],div[id$="name5"],div[id$="name6"]{
     font: 14px/18px 'Open Sans', serif;
     color: @color-swatch2;
     letter-spacing: 1px;
   }
-  #price1,#price2,#price3,#price4,#price5,#price6{
+  div[id$="price1"],div[id$="price2"],div[id$="price3"],div[id$="price4"],div[id$="price5"],div[id$="price6"]{
     font: 20px/24px 'Open Sans', serif;
     color: @color-swatch3;
 
