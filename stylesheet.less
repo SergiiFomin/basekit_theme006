@@ -566,7 +566,7 @@ h1{
     a{
       color: @color-swatch3;
       text-decoration: none;
-      display: inline-block;
+      display: block;
       position: relative;
       &:hover{
         color: @color-swatch1;
@@ -576,13 +576,10 @@ h1{
         margin: -36px 0 -51px;
         position: relative;
         z-index: 2;
-        a{
-          display: block;
-          img{
-            .border-radius(1000px);
-            box-shadow: 0 0 10px rgba(0, 0, 0, .4);
-          }
-        }   
+        img{
+          .border-radius(1000px);
+          box-shadow: 0 0 10px rgba(0, 0, 0, .4);
+        }
       }
       .company-name{
         display: block;
@@ -845,6 +842,10 @@ hr{
   }
 }
 
+.new{
+  margin-top: 0;
+}
+
 .team{  
   strong{
     display: block;
@@ -939,7 +940,6 @@ div[id$="copyright_link"]{
   background-image:image('/images/template/mainbottom.png');
   background-position: center 0;
   background-repeat: no-repeat;
-  padding-top: 60px;
 }
 
 /*----- media queries ------*/
@@ -973,7 +973,15 @@ div[id$="copyright_link"]{
 ========================================================================*/
 
 /* Landscape phone to portrait tablet */
-@media (max-width: 767px){}
+@media (max-width: 767px){
+  h1.brand {
+    margin: 0 0 20px;
+    text-align: center;
+  }
+  .responsiveslideshow {
+    display: none;
+  }
+}
 
 /*== Up to 640px ==================================================
 ====================================================================*/
