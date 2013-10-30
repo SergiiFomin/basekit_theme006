@@ -308,10 +308,14 @@ header{
       li{
         display: table-cell;
         background-image:image('/images/template/separator.png');
-        background-position: right 0;
+        background-position: 0 0;
         background-repeat: repeat-y;
-        line-height: 70px;
+        line-height: 20px;
         text-align: center;
+        padding: 25px 0;
+        &:first-child{
+          background: none;
+        }
         a{
           color: @color-swatch1;
           position: relative;
@@ -320,7 +324,7 @@ header{
           letter-spacing: 4px;
           padding-bottom: 5px;
           display: block;
-          margin-left: -1px;
+          margin-right: -1px;
           &:hover{
             background-image:image('/images/template/item.gif');
             background-position: 0 0;
@@ -983,9 +987,20 @@ div[id$="copyright_link"]{
   h1.brand {
     margin: 0 0 20px;
     text-align: center;
+    .logo {
+      margin: -36px 0 0;
+    }
+  }
+  .navigation ul{
+    margin-bottom: 20px;
   }
   .responsiveslideshow {
     /*display: none;*/
+  }
+  .posts .widget.image,
+  .price .widget.image {
+    margin: 0 auto;
+    max-width: 50%;
   }
 }
 
