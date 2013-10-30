@@ -1021,7 +1021,20 @@ div[id$="copyright_link"]{
 ====================================================================*/
 
 /* Landscape phones and down */
-@media (max-width: 480px) {}
+@media (max-width: 480px) {
+  .navigation ul li {
+    background: none;
+    display: block;
+    a{
+      padding: 10px 0;
+      border: none !important;
+      &:hover{
+        background: white;
+        color: black;
+      }
+    }
+  }
+}
 
 /*== Up to 340px =====================================================
 ========================================================================*/
