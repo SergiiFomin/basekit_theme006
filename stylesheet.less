@@ -312,7 +312,6 @@ header{
         background-repeat: repeat-y;
         line-height: 20px;
         text-align: center;
-        padding: 25px 0;
         &:first-child{
           background: none;
         }
@@ -325,6 +324,7 @@ header{
           padding-bottom: 5px;
           display: block;
           margin-right: -1px;
+          padding: 25px 0;
           &:hover{
             background-image:image('/images/template/item.gif');
             background-position: 0 0;
@@ -988,7 +988,7 @@ div[id$="copyright_link"]{
     margin: 0 0 20px;
     text-align: center;
     .logo {
-      margin: -36px 0 0;
+      margin-bottom: 0 !important;
     }
   }
   .navigation ul{
@@ -997,10 +997,14 @@ div[id$="copyright_link"]{
   .responsiveslideshow {
     /*display: none;*/
   }
-  .posts .widget.image,
-  .price .widget.image {
-    margin: 0 auto;
-    max-width: 50%;
+  .about,
+  .team,
+  .price,
+  .posts{
+    .widget.image {
+      margin: 0 auto;
+      max-width: 50%;
+    }
   }
 }
 
