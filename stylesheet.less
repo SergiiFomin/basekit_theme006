@@ -1022,9 +1022,11 @@ div[id$="copyright_link"]{
 
 /* Landscape phones and down */
 @media (max-width: 480px) {
-  .navigation ul li {
-    background: none;
-    display: block;
+  .navigation ul{
+    margin-bottom: 20px;
+    li {
+    background: none !important;
+    display: block !important;
     a{
       padding: 10px 0;
       border: none !important;
@@ -1032,6 +1034,7 @@ div[id$="copyright_link"]{
         background: white;
         color: black;
       }
+    }
     }
   }
 }
