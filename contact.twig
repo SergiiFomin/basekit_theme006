@@ -10,9 +10,7 @@
             <div class="container">
                 <div class=row>
                     <article class="span2">
-                        <h1 class="brand">
-                            {{widget('companyheader', 'companyheader', {"defaultlogo": asset('/images/logo.png')})|raw}}
-                        </h1>
+                        {{widget('logo', 'name', {"defaultlogo": asset('images/logo.png')})|raw}}
                     </article>
                     <article class="span10">
                         <div class="nav-collapse nav-collapse_ collapse">
@@ -68,8 +66,7 @@
                     <div class="row">
                         <article class="span12">
                             {{widget('companyname', 'name', {"business": "Chinahi"})|raw}}
-                            {{widget('content', 'copyright_copy', {content: '&copy; &nbsp; 2013 &nbsp; | &nbsp; ', lines: 'all'})|raw}}
-                            <a href="#">{{widget('content', 'copyright_link', {content: 'Privacy Policy', lines: 'all'})|raw}}</a>
+                            {{widget('profile', 'copyright', { 'profileType':'copyright' })|raw}}
                             {{widget('space', 'space', {'height': '30'})|raw}}
                         </article>
                     </div>

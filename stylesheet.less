@@ -25,6 +25,13 @@
 @linkColor:             @color-swatch3;
 @linkColorHover:        @dark;
 
+// Social
+// -------------------------
+@socialColor:             #e5e4e4;
+@socialColorHover:        #fffefe;
+@socialBackground:        @color-swatch1;
+@socialBackgroundHover:   #ce4e48;
+
 // Typography
 // -------------------------
 @sansFontFamily:        Arial, Helvetica, sans-serif;
@@ -415,6 +422,16 @@ header{
       bottom: 0;
     }
   }
+  .content-wrapper{
+    text-align: center;
+    .title{
+      display: block;
+      font: 30px/40px 'Lobster', cursive;
+      color: @color-swatch3;
+      text-transform: capitalize;
+      padding: 20px 0 0;
+    }
+  }
 }
 
 /*--- header end ------*/
@@ -470,35 +487,6 @@ header{
 header, footer, #content{
   ul{
     list-style: none;
-  }
-}
-
-.gallery-widget{
-  margin: 0;
-  li{
-    float: left;
-    background: white;
-    list-style: none;
-    width: 23%;
-    margin: 0 1% 20px;
-    padding-bottom: 20px;
-    .inner{
-      background: none !important;
-      a{
-        color: inherit;
-        text-decoration: none;
-        img{
-          margin-bottom: 15px;
-        }
-        span{
-          display: block;
-          text-align: center;
-        }
-        &:hover{
-          color: inherit;
-        }
-      }
-    }
   }
 }
 
@@ -573,37 +561,16 @@ h1, h2, h3, h4, h5 {
 h1{
   font: 48px/50px 'Lobster', cursive;
   color: @color-swatch3;
-  &.brand{
-    font: 48px/50px 'Lobster', cursive;
-    margin: 0px 0 -46px;
-    padding: 0;
-    a{
-      color: @color-swatch3;
-      text-decoration: none;
-      display: block;
-      position: relative;
-      &:hover{
-        color: @color-swatch1;
-      }
-      .logo{
-        display: block;
-        margin: -36px 0 -51px;
-        position: relative;
-        z-index: 2;
-        img{
-          .border-radius(1000px);
-          box-shadow: 0 0 10px rgba(0, 0, 0, .4);
-        }
-      }
-      .company-name{
-        display: block;
-        text-align: center;
-        font: bold 13px/16px 'Open Sans', cursive;
-        color: @color-swatch2;
-        text-transform: uppercase;
-        padding: 20px 0 0;
-      }
-    }   
+}
+
+.widget.logo{
+  display: block;
+  margin: -36px 0 -51px;
+  position: relative;
+  z-index: 2;
+  img{
+    .border-radius(1000px);
+    box-shadow: 0 0 10px rgba(0, 0, 0, .4);
   }
 }
 
@@ -662,6 +629,9 @@ div[id$="center"]{
       position: relative;
       img{
         .box-sizing(border-box);
+        .border-radius(1000px);
+        box-shadow: 0 0 10px rgba(0, 0, 0, .2);
+        border: 5px solid @color-swatch1;
       }
     }
   }
@@ -750,22 +720,11 @@ hr{
       .box-sizing(border-box);
       position: relative;
       .border-radius(1000px);
-      &:before{
-        content: "";
-        display: block;
-        position: absolute;
-        top: -1px;
-        right: -1px;
-        bottom: -1px;
-        left: -1px;
-        border: 5px solid @color-swatch1;
-        box-shadow: 0 0 9px @color-swatch1;
-        .border-radius(1000px);
-      }
       img{
         .box-sizing(border-box);
         .border-radius(1000px);
         box-shadow: 0 0 10px rgba(0, 0, 0, .2);
+        border: 5px solid @color-swatch1;
       }
     }
   }
@@ -775,7 +734,7 @@ hr{
   .widget{
     &.image{
       span.image-img{
-        &:before{
+        img{
           border: 10px solid @color-swatch1;
         }
       }
@@ -954,6 +913,214 @@ div[id$="copyright_link"]{
   background-image:image('/images/template/mainbottom.png');
   background-position: center 0;
   background-repeat: no-repeat;
+}
+
+.gallery-widget{
+  margin: 0;
+  overflow: hidden;
+  li{
+    float: left;
+    list-style: none;
+    width: 24%;
+    margin: 0 1% 20px 0;
+    .inner{
+      background: none !important;
+      a{
+        color: inherit;
+        text-decoration: none;
+        img{
+          margin-bottom: 15px;
+        }
+        span{
+          display: block;
+          text-align: center;
+        }
+        &:hover{
+          color: inherit;
+        }
+      }
+    }
+  }
+}
+
+.widget.tweet {
+   padding: 14px 0;
+   a {
+    padding: 8px 10px 8px 32px;
+    margin: 0;
+    border: 1px solid #057ed0;
+    background-image: image('/images/twitter.png');
+    background-repeat: no-repeat;
+    background-position: 10px;
+
+    margin: 0em;
+    .border-radius(4px);
+    box-shadow: 0px 1px 0px rgba(0, 0, 0, 0.4);
+    font-size:.9em;
+    background-color: #32bbef;
+    color: @color-swatch1;
+    text-decoration: none;
+    text-shadow: 0 1px 0px rgba(0,0,0,0.3);
+    cursor: pointer;
+    &:hover, &:active {
+      border: 1px solid #096eb3;
+      background-color: #2cacdc;
+    }
+  }
+}
+
+.twitter{
+  ul.twitter{
+    margin: 0;
+    li{
+      list-style: none;
+      margin-bottom: 18px;
+      overflow: hidden;
+      .twitter-profile-pic{
+        float: left;margin-right: 20px;
+      }
+      .twitter-content{
+        p{
+          padding-bottom: 0px;
+        }
+      }
+    }
+  }
+}
+
+/* ===============================
+   TWEET THIS WIDGET
+   =============================== */
+
+.widget.tweet {
+   padding: 14px 0; 
+}
+
+.widget.tweet a {
+  padding: 8px 10px 8px 32px;
+  margin: 0;
+  border: 1px solid #057ed0;
+  background-image: image('/images/twitter.png');
+  background-repeat: no-repeat;
+  background-position: 10px;
+
+  margin: 0em;
+  .border-radius(4px);
+  box-shadow: 0px 1px 0px rgba(0, 0, 0, 0.4);
+  font-size:.9em;
+  background-color: #32bbef;
+  color: @color-swatch1;
+  text-decoration: none;
+  text-shadow: 0 1px 0px rgba(0,0,0,0.3);
+}
+
+.widget.tweet a:hover, .tweet a:active {
+  border: 1px solid #096eb3;
+  padding: 8px 10px 8px 32px;
+  background-image: image('/images/twitter.png');
+  background-repeat: no-repeat;
+  background-position: 10px;
+  cursor: pointer;
+  background-color: #2cacdc;
+  cursor: pointer;
+}
+
+.widget.clicktocall a {
+  background-image: image('/images/ic-call.png');
+  background-color: @color-swatch3;
+  background-position: 10px;
+  background-repeat: no-repeat;
+  padding: 10px 10px 10px 38px;
+  margin: 0;
+  color: @color-swatch1;
+  text-decoration: none;
+  cursor: pointer;
+  display: inline-block;
+  &:hover {
+    /*background-image: image('/images/ic-call.png');*/
+    background-color: @color-swatch2;
+    text-decoration: none;
+  }
+}
+
+.socialicons{
+  overflow: hidden;
+  .icons {
+    float: right;
+    overflow: hidden;
+    span{
+      float: left;
+      margin-left: 5px;
+      a{
+        position: relative;
+        font-size: 0;
+        line-height: 0;
+        text-decoration: none;
+        display: block;
+        width: 30px;
+        height: 30px;
+        background-color: @socialBackground;
+        color: @socialColor;
+        font-size: 0;
+        line-height: 0;
+        .transition(all .2s linear);
+        &:hover{
+          background-color: @socialBackgroundHover;
+          color: @socialColorHover;
+        }
+        &:before{
+          display: block;
+          width: 30px;
+          height: 30px;
+          text-align: center;
+          font: 15px/30px 'FontAwesome';
+          .transition(all .2s linear);
+        }
+      }
+      &.bk-socialicons-linkedin{
+        a{
+          &:before{
+            content: "\f0e1";
+          }
+        }
+      }
+      &.bk-socialicons-twitter{
+        a{
+          &:before{
+            content: "\f099";
+          }
+        }
+      }
+      &.bk-socialicons-facebook{
+        a{
+          &:before{
+            content: "\f09a";
+          }
+        }
+      }
+      &.bk-socialicons-rss{
+        a{
+          &:before{
+            content: "\f09e";
+          }
+        }
+      }
+      &.bk-socialicons-googleplus{
+        a{
+          &:before{
+            content: "\f0d5";
+          }
+        }
+      }
+      &.bk-socialicons-youtube{
+        a{
+          &:before{
+            content: "\f167";
+          }
+        }
+      }
+    }
+  }
 }
 
 /*----- media queries ------*/
